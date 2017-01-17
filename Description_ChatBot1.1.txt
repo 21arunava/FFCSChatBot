@@ -1,0 +1,1 @@
+For the next improved version,I have written a knowledge base which will be composed of keywords and some responses associated to each keyword.This is the first improved version over the ChatBot1.0

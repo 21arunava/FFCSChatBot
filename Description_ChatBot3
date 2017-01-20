@@ -1,0 +1,9 @@
+
+Clearly there are still many limitations with this version of the program. The most obvious one would be that the program use "exact sentence matching" to find a response to the user's input. This means that if you would go and ask him "what is your name again", the program will simply not understand what you are trying to say to him and this is because it was unable to find a match for this input. And this definitely would sound a little bit surprising considering the fact that the program can understand the sentence "what is your name".
+
+There are at list two ways to solve this problem, the most obvious one is to use a slightly more flexible way for matching keywords in the database against the user's input. All we have to do to make this possible is to simply aloud keywords to be found within the inputs so that we will no longer have the previous limitation.
+The other possibility is much more complex, it use's the concept of Fuzzy String Search. To apply this method, it could be useful at first to break the inputs and the current keyword in separate words, after that we could create two different vectors, the first one could be use to store the words for the input and the other one would store the words for the current keyword. Once we have done this we could use the Levenshtein distance for measuring the distance between the two word vectors. (Notice that in order for this method to be effective we would also need an extra keyword that would represent the subject of the current keyword).
+
+So, there you have it, two different methods for improving the chatterbot. Actually we could combine both methods and just selecting which one to use on each situation.
+
+Finally, there are still another problem that you may have noticed with the previous chatterbot, you could repeat the same sentence over and over and the program wouldn't have any reaction to this. We need also to correct this problem.
